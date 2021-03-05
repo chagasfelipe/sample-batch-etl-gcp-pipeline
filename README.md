@@ -115,7 +115,7 @@ Feito isso, serão criadas três tabelas no BigQuery:
 - tb_components (comp_boss.csv)
 
 ## Criação das Views BigQuery:
-### Abaixo os códigos para criação das Views para consolidar a disponibilidade de consumo dos dados pelo Data Sutudio a partir do BigQuery:
+### Abaixo os códigos de duas Views simples para consolidar a disponibilidade de consumo dos dados pelo Data Studio a partir do BigQuery após a execução do processo ETL:
 - Top 10 Fornecedores por Quantidade Cotação
 ```sql
 SELECT  tpq.supplier AS fornecedor,
