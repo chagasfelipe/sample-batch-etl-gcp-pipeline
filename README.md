@@ -3,7 +3,7 @@
 O desafio proposto consiste em criar pipelines ETL para consumo em Data Visualization.
 
 ## Requisitos:
-### Projeto GCP
+- Projeto GCP
 ### Chave Json do Usuário Proprietário do Projeto
 ### Conta com os privilégios(Papéis):
 #### Administrador do Dataflow
