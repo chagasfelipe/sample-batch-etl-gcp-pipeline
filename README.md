@@ -116,7 +116,7 @@ Feito isso, serão criadas três tabelas no BigQuery:
 
 ## Criação das Views BigQuery:
 ### Abaixo os códigos de duas Views simples para consolidar a disponibilidade de consumo dos dados pelo Data Studio a partir do BigQuery após a execução do processo ETL:
-- Top 10 Fornecedores por Quantidade Cotação
+- Top 10 Fornecedores por Quantidade de Cotação
 ```sql
 SELECT  tpq.supplier AS fornecedor,
         COUNT(tpq.tube_assembly_id) AS quantidade
@@ -125,7 +125,7 @@ SELECT  tpq.supplier AS fornecedor,
  ORDER BY quantidade_cotacao DESC
  LIMIT 10
 ```
-- Top 10 Tubos por Quantidade Cotação
+- Top 10 Tubos por Quantidade de Cotação
 ```sql
 SELECT tpq.tube_assembly_id AS tubo,
        SUM(tpq.quantity) as quantidade
@@ -140,7 +140,7 @@ Limit 10
 - Top 10 Fornecedores por Quantidade Cotação
 - Top 10 Tubos por Quantidade Cotação
 
-Ambos estão no diretório **data_visualization** e podem ser visualizados [Clicando aqui](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/tree/main/data_visualization)
+Ambos estão no diretório **data_visualization/** e podem ser visualizados [Clicando aqui](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/tree/main/data_visualization)
 
 
 ## Próximos Passos (Melhorias)
