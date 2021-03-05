@@ -4,27 +4,27 @@ O desafio proposto consiste em criar pipelines ETL para consumo em Data Visualiz
 
 ## Requisitos:
 - Projeto GCP
-### Chave Json do Usuário Proprietário do Projeto
-### Conta com os privilégios(Papéis):
-#### Administrador do Dataflow
-#### Administrador do Composer
-#### Administrador do BigQuery
-#### Administrador de Ambiente e Objetos do Storage
-#### Administrador do Compute
-#### Trabalhador do Dataflow
-#### Usuário da Conta de Serviço
+- Chave Json do Usuário Proprietário do Projeto
++ Conta com os privilégios(Papéis):
+    + Administrador do Dataflow
+    + Administrador do Composer
+    + Administrador do BigQuery
+    + Administrador de Ambiente e Objetos do Storage
+    + Administrador do Compute
+    + Trabalhador do Dataflow
+    + Usuário da Conta de Serviço
 
 
 
 ## Ambiente:
-### Google Cloud Platform:
-#### Cloud Storage (Data Lake).
-#### Dataflow com Python SDK (Ingestão de Dados).
-#### BigQuery (Data Warehouse).
-#### Data Studio (Data Visualization).
-#### Cloud Shell.
-### Python.
-### Apache Beam.
++ Google Cloud Platform:
+    + Cloud Storage (Data Lake).
+    + Dataflow com Python SDK (Ingestão de Dados).
+    + BigQuery (Data Warehouse).
+    + Data Studio (Data Visualization).
+    + Cloud Shell.
+- Python.
+- Apache Beam.
 
 
 
