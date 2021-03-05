@@ -3,28 +3,28 @@
 O desafio proposto consiste em criar pipelines ETL para consumo em Data Visualization.
 
 ## Requisitos:
-###Projeto GCP
-###Chave Json do Usuário Proprietário do Projeto
-###Conta com os privilégios(Papéis):
-####Administrador do Dataflow
-####Administrador do Composer
-####Administrador do BigQuery
-####Administrador de Ambiente e Objetos do Storage
-####Administrador do Compute
-####Trabalhador do Dataflow
-####Usuário da Conta de Serviço
+### Projeto GCP
+### Chave Json do Usuário Proprietário do Projeto
+### Conta com os privilégios(Papéis):
+#### Administrador do Dataflow
+#### Administrador do Composer
+#### Administrador do BigQuery
+#### Administrador de Ambiente e Objetos do Storage
+#### Administrador do Compute
+#### Trabalhador do Dataflow
+#### Usuário da Conta de Serviço
 
 
 
 ## Ambiente:
-###Google Cloud Platform:
-####Cloud Storage (Data Lake).
-####Dataflow com Python SDK (Ingestão de Dados).
-####BigQuery (Data Warehouse).
-####Data Studio (Data Visualization).
-####Cloud Shell.
-###Python.
-###Apache Beam.
+### Google Cloud Platform:
+#### Cloud Storage (Data Lake).
+#### Dataflow com Python SDK (Ingestão de Dados).
+#### BigQuery (Data Warehouse).
+#### Data Studio (Data Visualization).
+#### Cloud Shell.
+### Python.
+### Apache Beam.
 
 
 
@@ -32,9 +32,9 @@ O desafio proposto consiste em criar pipelines ETL para consumo em Data Visualiz
 ![](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/diagrams/modelagem_conceitual.png)
 
 Cada arquivo foi representado como uma entidade:
-###tb_price_quote (Tabela Dimensional) [price_quote.csv](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/data_files/price_quote.csv): Contém os preços das cotações dos fornecedores.
-###tb_bill_materiais (Tabela Fato) [bill_of_materials.csv](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/data_files/bill_of_materials.csv) : Contém a registros sobre os tubos e seus compenentes que foram selecionados.
-###tb_components (Tabela Dimensional) [comp_boss.csv](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/data_files/comp_boss.csv): Contém os detalhes dos componentes utilizados ou não na cotação de algum tubo.
+### tb_price_quote (Tabela Dimensional) [price_quote.csv](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/data_files/price_quote.csv): Contém os preços das cotações dos fornecedores.
+### tb_bill_materiais (Tabela Fato) [bill_of_materials.csv](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/data_files/bill_of_materials.csv) : Contém a registros sobre os tubos e seus compenentes que foram selecionados.
+### tb_components (Tabela Dimensional) [comp_boss.csv](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/data_files/comp_boss.csv): Contém os detalhes dos componentes utilizados ou não na cotação de algum tubo.
 
 
 
@@ -101,9 +101,9 @@ No Terminal, utilize o comando abaixo para criar o dataset "industrial_machine_p
         python3 job_load_comp_boss.py
         ```
 Feito isso, serão criadas três tabelas no BigQuery:
-###tb_price_quote (price_quote.csv)
-###tb_bill_materiais (bill_of_materials.csv)
-###tb_components (comp_boss.csv)
+### tb_price_quote (price_quote.csv)
+### tb_bill_materiais (bill_of_materials.csv)
+### tb_components (comp_boss.csv)
 
 ## Criação das Views BigQuery:
 ###Abaixo os códigos para criação das Views para consumo no Data Studio para criação de relatórios:
@@ -111,6 +111,6 @@ Feito isso, serão criadas três tabelas no BigQuery:
 
 
 ## Data Visualization:
-###Foram criados os seguintes relatórios:
+### Foram criados os seguintes relatórios:
 
     [Link Público do Relatório no Data Studio]
