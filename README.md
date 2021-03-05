@@ -137,11 +137,10 @@ Limit 10
 
 ## Data Visualization:
 ### Foram criados os seguintes relatórios:
-- Top 10 Fornecedores por Quantidade Cotação:
-![Clique aqui para visualizar](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/data_visualization/Top_10_Fornecedores.pdf)
+- Top 10 Fornecedores por Quantidade Cotação
+- Top 10 Tubos por Quantidade Cotação
 
-- Top 10 Tubos por Quantidade Cotação:
-![Clique aqui para visualizar](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/data_visualization/Top_10_Tubos_Qtde_de_Cotação.pdf)
+Ambos estão no diretório **data_visualization** e podem ser visualizados [Clicando aqui](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/tree/main/data_visualization)
 
 
 ## Próximos Passos (Melhorias)
