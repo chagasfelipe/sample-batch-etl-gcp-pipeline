@@ -27,6 +27,7 @@ Este projeto contém uma solução para o desafio Engenheiro de Dados que consis
 - Apache Beam.
 
 ## Arquitetura Proposta:
+![](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/diagrams/arquitetura_proposta.png)
 
 
 ## Modelo Conceitual dos Dados:
