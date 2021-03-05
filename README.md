@@ -1,6 +1,6 @@
 # Desafio Dotz - Engenheiro de Dados
 
-O desafio proposto consiste em criar pipelines ETL para consumo em Data Visualization.
+Este projeto contém uma solução para desafio proposto que consiste em criar processo de Ingestão de Dados com Google Cloud Platform e Python SDK.
 
 ## Requisitos:
 - Projeto GCP
@@ -125,3 +125,9 @@ Feito isso, serão criadas três tabelas no BigQuery:
 ### Foram criados os seguintes relatórios:
 
     [Link Público do Relatório no Data Studio]
+
+## Próximos Passos (Melhorias)
+- Execução Automática dos Jobs com Cloud Functions a partir de inserção de novos registros no data lake.
+- Criar um Job Ariflow para que o pipeline seja executado de forma agendada.
+- Melhoria do código python.
+- Se aprofundar nos conceitos de negócio da demanda para novos insights, melhoria no processo de transformação dos dados.
