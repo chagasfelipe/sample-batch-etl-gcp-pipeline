@@ -119,7 +119,7 @@ Feito isso, serão criadas três tabelas no BigQuery:
 - Top 10 Fornecedores por Quantidade Cotação
 ```sql
 SELECT  tpq.supplier AS fornecedor,
-        COUNT(tube_assembly_id) AS quantidade_cotacao
+        COUNT(tpq.tube_assembly_id) AS quantidade
   FROM  `desafio-engenheiro-de-dados.industrial_machine_product_data.tb_price_quote` tpq
  GROUP BY tpq.supplier
  ORDER BY quantidade_cotacao DESC
@@ -138,10 +138,10 @@ Limit 10
 ## Data Visualization:
 ### Foram criados os seguintes relatórios:
 - Top 10 Fornecedores por Quantidade Cotação:
-![](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/data_visualization/Top_10_Fornecedores.pdf)
+![Clique aqui para visualizar](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/data_visualization/Top_10_Fornecedores.pdf)
 
 - Top 10 Tubos por Quantidade Cotação:
-![](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/data_visualization/Top_10_Tubos_Qtde_de_Cotação.pdf)
+![Clique aqui para visualizar](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/data_visualization/Top_10_Tubos_Qtde_de_Cotação.pdf)
 
 
 ## Próximos Passos (Melhorias)
