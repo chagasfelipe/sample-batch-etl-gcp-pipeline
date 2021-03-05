@@ -36,7 +36,7 @@ Cada arquivo foi representado como uma entidade:
 - tb_bill_materiais (Tabela Fato) [bill_of_materials.csv](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/data_files/bill_of_materials.csv) : Contém a registros sobre os tubos e seus compenentes que foram selecionados.
 - tb_components (Tabela Dimensional) [comp_boss.csv](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/data_files/comp_boss.csv): Contém os detalhes dos componentes utilizados ou não na cotação de algum tubo.
 
-
+# Instruções para Implementação
 
 ## Configurar Credenciais do GCP:
    Configure o gsutil para utilizar as credencias da conta GCP SDK, digite no Cloud Shell o comando:
