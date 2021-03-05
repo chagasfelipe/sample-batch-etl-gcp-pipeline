@@ -37,9 +37,7 @@ Cada arquivo foi representado como uma entidade:
 - tb_components (Tabela Dimensional) [comp_boss.csv](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/data_files/comp_boss.csv): Contém os detalhes dos componentes utilizados ou não na cotação de algum tubo.
 
 
-
 # Instruções para Implementação
-
 
 ## Configurar Credenciais do GCP:
    Configure o gsutil para utilizar as credencias da conta GCP SDK, digite no Cloud Shell o comando:
@@ -117,14 +115,34 @@ Feito isso, serão criadas três tabelas no BigQuery:
 - tb_components (comp_boss.csv)
 
 ## Criação das Views BigQuery:
-### Abaixo os códigos para criação das Views para consumo no Data Studio para criação de relatórios:
-    [código sql das views]
-
+### Abaixo os códigos para criação das Views para consolidar a disponibilidade de consumo dos dados pelo Data Sutudio a partir do BigQuery:
+- Top 10 Fornecedores por Quantidade Cotação
+```sql
+SELECT  tpq.supplier AS fornecedor,
+        COUNT(tube_assembly_id) AS quantidade_cotacao
+  FROM  `desafio-engenheiro-de-dados.industrial_machine_product_data.tb_price_quote` tpq
+ GROUP BY tpq.supplier
+ ORDER BY quantidade_cotacao DESC
+ LIMIT 10
+```
+- Top 10 Tubos por Quantidade Cotação
+```sql
+SELECT tpq.tube_assembly_id AS tubo,
+       SUM(tpq.quantity) as quantidade
+  FROM `desafio-engenheiro-de-dados.industrial_machine_product_data.tb_price_quote` tpq
+group by tube_assembly_id
+ ORDER BY quantidade DESC
+Limit 10
+```
 
 ## Data Visualization:
 ### Foram criados os seguintes relatórios:
+- Top 10 Fornecedores por Quantidade Cotação:
+![](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/data_visualization/Top_10_Fornecedores.pdf)
 
-    [Link Público do Relatório no Data Studio]
+- Top 10 Tubos por Quantidade Cotação:
+![](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/data_visualization/Top_10_Tubos_Qtde_de_Cotação.pdf)
+
 
 ## Próximos Passos (Melhorias)
 - Execução Automática dos Jobs com Cloud Functions a partir de inserção de novos registros no data lake.
