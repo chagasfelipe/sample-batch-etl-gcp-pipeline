@@ -1,6 +1,6 @@
 # Desafio Dotz - Engenheiro de Dados
 
-Este projeto contém uma solução para desafio proposto que consiste em criar processo de Ingestão de Dados com Google Cloud Platform e Python SDK.
+Este projeto contém uma solução para o desafio Engenheiro de Dados que consiste em criar processo de Ingestão de Dados com Google Cloud Platform e Python SDK.
 
 ## Requisitos:
 - Projeto GCP
