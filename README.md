@@ -29,6 +29,10 @@ Este projeto contém uma solução para o desafio Engenheiro de Dados que consis
 ## Arquitetura Proposta:
 ![](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/diagrams/arquitetura_proposta.png)
 
+- Para o Data Lake foi escolhido o Cloud Storage pois o armazenamento é em nuvem, pelo custo benefício e alta segurança dos dados. 
+- Para o processo de ETL conforme requisitado, foi utilizado o Dataflow com Python JDK, o pipeline criado faz a leitura dos 3 arquivos no bucket criado no Cloud Storage (Data Lake) e após alguns tratamentos cria tabelas no BigQuery, neste caso são criadas 3 tabelas, uma para cada .csv.
+- Para Data Warehouse foi escolhido o BigQuery, além de comportar processamento de grandes volumes de dados, provê um excelente ambiente para análises escalonáveis.
+- Para realizar a Visualização dos Dados, foi escolhido o Data Studio, ferramenta totalmente integrada e com suporte para diversos datasources.
 
 ## Modelo Conceitual dos Dados:
 ![](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/diagrams/modelagem_conceitual.png)
