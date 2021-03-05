@@ -80,11 +80,12 @@ No terminal do Cloud Shell, crie a pasta para armazenar os recursos para criaç�
 mkdir resources
 cd resources/
 ```
- Acesse o Editor do Cloud Shell, faça upload de todos o arquivos localizados na pasta scripts_and_support_files na pasta "resources" [link do diretório](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/tree/main/scripts_and_support_files).
- Baixando a chave json do usuário:
-    Acesse https://console.cloud.google.com/iam-admin/serviceaccounts 
-    Na aba **Ações**, clique nas **reticências** > **Gerenciar Chaves** > Clique no botão **ADICIONAR CHAVE** > **Criar Nova Chave** > Selecione **JSON** e clique no botão **criar**.
-    O arquivo json da chave será baixada automaticamente para seu computador, acesse o Editor do Cloud Shell e faça upload do arquivo na pasta "resources".
+ Acesse o Editor do Cloud Shell, faça upload de todos o arquivos localizados na pasta scripts_and_support_files na pasta "resources". [link do diretório](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/tree/main/scripts_and_support_files).
+
+## Baixando a chave json do usuário:
++ Acesse https://console.cloud.google.com/iam-admin/serviceaccounts 
+    + Na aba **Ações**, clique nas **reticências** > **Gerenciar Chaves** > Clique no botão **ADICIONAR CHAVE** > **Criar Nova Chave** > Selecione **JSON** e clique no botão **criar**.
+O arquivo json da chave será baixada automaticamente para seu computador, acesse o Editor do Cloud Shell e faça upload do arquivo na pasta "resources".
 
 ## Criação do Dataset no BigQuery(Data Warehouse):
 No Terminal, utilize o comando abaixo para criar o dataset "**industrial_machine_product_data**":
@@ -93,7 +94,7 @@ No Terminal, utilize o comando abaixo para criar o dataset "**industrial_machine
 ```
 ## Estrutura do pipeline:
    ![](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/diagrams/diagrama_pipeline.png)
-Os dados não processados são armazenados no Cloud Storage, o Python sdk extraí o arquivo que é processado pelo Dataflow e inserido no BigQuery para que sejam construídas as Views para consumo do Data Studio ou alguma Data Visualization Tool.
+_Os dados não processados são armazenados no Cloud Storage, o Python sdk extraí o arquivo que é processado pelo Dataflow e inserido no BigQuery para que sejam construídas as Views para consumo do Data Studio ou alguma Data Visualization Tool._
 
 
 ## Execução dos Jobs:
@@ -113,7 +114,7 @@ Feito isso, serão criadas três tabelas no BigQuery:
 - tb_components (comp_boss.csv)
 
 ## Criação das Views BigQuery:
-###Abaixo os códigos para criação das Views para consumo no Data Studio para criação de relatórios:
+### Abaixo os códigos para criação das Views para consumo no Data Studio para criação de relatórios:
     [código sql das views]
 
 
