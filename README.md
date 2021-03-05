@@ -1,22 +1,22 @@
-
+# Desafio Dotz - Engenheiro de Dados
 
 O desafio proposto consiste em criar pipelines ETL para consumo em Data Visualization.
 
-Requisitos:
+##Requisitos:
     Projeto GCP
     Chave Json do Usuário Proprietário do Projeto
     Conta com os privilégios(Papéis):
-        Administrador do Dataflow
-        Administrador do Composer
-        Administrador do BigQuery
-        Administrador de Ambiente e Objetos do Storage
-        Administrador do Compute
-        Trabalhador do Dataflow
-        Usuário da Conta de Serviço
+        - Administrador do Dataflow
+        - Administrador do Composer
+        - Administrador do BigQuery
+        - Administrador de Ambiente e Objetos do Storage
+        - Administrador do Compute
+        - Trabalhador do Dataflow
+        - Usuário da Conta de Serviço
 
 
 
-Ambiente:
+##Ambiente:
     Google Cloud Platform:
         Cloud Storage (Data Lake).
         Dataflow com Python SDK (Ingestão de Dados).
@@ -28,13 +28,13 @@ Ambiente:
 
 
 
-Modelo Conceitual dos Dados:
-[imagem mer]
+##Modelo Conceitual dos Dados:
+![](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/diagrams/modelagem_conceitual.png)
 
 Cada arquivo foi representado como uma entidade:
-tb_price_quote (Tabela Dimensional) [link price_quote]: Contém os preços das cotações dos fornecedores.
-tb_bill_materiais (Tabela Fato) [link bill_of_materials]: Contém a registros sobre os tubos e seus compenentes que foram selecionados.
-tb_components (Tabela Dimensional) [link comp_boss.csv]: Contém os detalhes dos componentes utilizados ou não na cotação de algum tubo.
+    - tb_price_quote (Tabela Dimensional) [price_quote.csv](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/data_files/price_quote.csv): Contém os preços das cotações dos fornecedores.
+    - tb_bill_materiais (Tabela Fato) [bill_of_materials.csv](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/data_files/bill_of_materials.csv) : Contém a registros sobre os tubos e seus compenentes que foram selecionados.
+    - tb_components (Tabela Dimensional) [comp_boss.csv](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/data_files/comp_boss.csv): Contém os detalhes dos componentes utilizados ou não na cotação de algum tubo.
 
 
 
@@ -49,7 +49,7 @@ Ao digitar o comando, será carregado um link para gerar uma chave de autentica�
 Criação Bucket (Data Lake):
 
     Strutura do Dataset:
-    [diagrama estrutura dataset]
+    ![](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/diagrams/estrutura_dataset_bigquery.png)
 
     Para criar o Bucket, digite o comando para criar o bucket:
         gsutil mb -p desafio-engenheiro-de-dados -c STANDARD -l US-EAST1 -b on gs://bucket-desafio-engenheiro-dados-data-lake
@@ -73,7 +73,7 @@ Instalação de Pacotes e Configuração do Ambiente Virtual:
         mkdir resources
         cd resources/
 
-    Acesse o Editor do Cloud Shell, faça upload de todos o arquivos localizados na pasta scripts_and_support_files na pasta "resources" [link do diretório].
+    Acesse o Editor do Cloud Shell, faça upload de todos o arquivos localizados na pasta scripts_and_support_files na pasta "resources" [link do diretório] (https://github.com/chagasfelipe/desafio-engenheiro-de-dados/tree/main/scripts_and_support_files).
 
     Baixando a chave json do usuário:
         Acesse https://console.cloud.google.com/iam-admin/serviceaccounts 
@@ -88,7 +88,7 @@ Criação do Dataset no BigQuery(Data Warehouse):
 
 
 Estrutura do pipeline:
-    [imagem diagrama pipeline]
+    ![](https://github.com/chagasfelipe/desafio-engenheiro-de-dados/blob/main/diagrams/diagrama_pipeline.png)
     Os dados não processados são armazenados no Cloud Storage, o Python sdk extraí o arquivo que é processado pelo Dataflow e inserido no BigQuery para que sejam construídas as Views para consumo do Data Studio ou alguma Data Visualization Tool.
 
 
