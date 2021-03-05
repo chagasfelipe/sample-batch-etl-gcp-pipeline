@@ -22,10 +22,11 @@ Este projeto contém uma solução para o desafio Engenheiro de Dados que consis
     + Dataflow com Python SDK (Ingestão de Dados).
     + BigQuery (Data Warehouse).
     + Data Studio (Data Visualization).
-    + Cloud Shell.
+    + Cloud Shell (Infraestrutura).
 - Python.
 - Apache Beam.
 
+## Arquitetura Proposta:
 
 
 ## Modelo Conceitual dos Dados:
