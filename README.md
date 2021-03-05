@@ -1,5 +1,3 @@
-# desafio-engenheiro-de-dados
-
 
 
 O desafio proposto consiste em criar pipelines ETL para consumo em Data Visualization.
@@ -41,7 +39,7 @@ tb_components (Tabela Dimensional) [link comp_boss.csv]: Contém os detalhes dos
 
 
 Configurar Credenciais do GCP:
-    Configure o gsutil para utilizar as credencias da conta GCP, digite no Cloud Shell o comando:
+    Configure o gsutil para utilizar as credencias da conta GCP SDK, digite no Cloud Shell o comando:
     gcloud auth login
 
 Ao digitar o comando, será carregado um link para gerar uma chave de autenticação, acesse o link, autentique com sua conta GCP, copie a chave e cole no Cloud Shell
@@ -54,18 +52,22 @@ Criação Bucket (Data Lake):
     [diagrama estrutura dataset]
 
     Para criar o Bucket, digite o comando para criar o bucket:
-        gsutil mb -p desafio-engenheiro-de-dados-data-lake -c STANDARD -l US-EAST1 -b on gs://bucket-desafio-engenheiro-dados
+        gsutil mb -p desafio-engenheiro-de-dados -c STANDARD -l US-EAST1 -b on gs://bucket-desafio-engenheiro-dados-data-lake
         Sintaxe: gsutil mb -p <ID DO PROJETO GCP> -c <CLASSE DE ARMAZENAMENTO> -l <REGIÃO> -b on gs://<NOME DO BUCKET>
 
 
 
 Upload dos Arquivos no Data Lake:
-    Acesso o Bucket criado e faça upload dos arquivos no Data lake criado bill_of_materials.csv, comp_boss.csv e price_quote.csv localizados no diretório data_files [link do diretório]
+    Acesse o Bucket criado e faça upload dos arquivos no Data lake criado bill_of_materials.csv, comp_boss.csv e price_quote.csv localizados no diretório data_files [link do diretório]
 
 Instalação de Pacotes e Configuração do Ambiente Virtual:
-    virtualenv -p python3 venv
-    source venv/bin/activate
-    pip install apache-beam[gcp]
+    Execute o comando abaixo:
+        virtualenv -p python3 venv 
+        source venv/bin/activate 
+        pip install 'apache-beam[gcp]' 
+
+    Feito isso, instale cada pacote:
+        pip install regex
 
     No terminal do Cloud Shell, crie a pasta para armazenar os recursos para criação dos pipelines com o comando:
         mkdir resources
@@ -80,8 +82,8 @@ Instalação de Pacotes e Configuração do Ambiente Virtual:
 
 
 Criação do Dataset no BigQuery(Data Warehouse):
-Utilize o comando abaixo para criar o dataset "industrial_machine_product_data":
-python3 create_bigquery_dataset.py
+    No Terminal, utilize o comando abaixo para criar o dataset "industrial_machine_product_data":
+    python3 create_bigquery_dataset.py
 
 
 
@@ -97,7 +99,12 @@ Execução dos Jobs:
         python3 job_load_price_quote.py
         python3 job_load_comp_boss.py
 
+Feito isso, serão criadas três tabelas no BigQuery:
+    tb_price_quote (price_quote.csv)
+    tb_bill_materiais (bill_of_materials.csv)
+    tb_components (comp_boss.csv)
 
+    
 
 Criação das Views BigQuery:
 
@@ -110,5 +117,3 @@ Data Visualization:
     Foram criados os seguintes relatórios:
 
     [Link Público do Relatório no Data Studio]
-
-Repositório destinado ao Desafio Engenheiro de Dados - Dotz
