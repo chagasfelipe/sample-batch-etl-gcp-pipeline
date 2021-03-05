@@ -71,6 +71,10 @@ Feito isso, instale cada pacote:
 ```python
 pip install regex
 ```
+```python
+pip install google-cloud-storage
+```
+
 No terminal do Cloud Shell, crie a pasta para armazenar os recursos para criação dos pipelines com o comando:
 ```python
 mkdir resources
