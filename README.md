@@ -1,6 +1,6 @@
 # Sample Project - Data Engineer - GCP
 
-Este projeto contém uma solução para o desafio Engenheiro de Dados que consiste em criar processo de Ingestão de Dados com Google Cloud Platform e Python SDK.
+Este projeto contém uma solução para o desafio Data Engineer que consiste em criar processo de Ingestão de Dados com Google Cloud Platform e Python SDK.
 
 ## Requisitos:
 - Projeto GCP
