@@ -1,4 +1,4 @@
-# Sample Project - Data Engineer - GCP
+# Sample Batch ETL Project - Data Engineer - GCP
 
 Este projeto contém uma solução para o desafio Data Engineer que consiste em criar processo de Ingestão de Dados com Google Cloud Platform e Python SDK.
 
